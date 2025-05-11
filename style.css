@@ -1,0 +1,75 @@
+/* Bootstrap Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+/* Font Awesome Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mainBox {
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 99%;
+  max-width: 450px;
+  margin: 10px auto;
+  padding: 10px;
+}
+.mainBox h2 {
+  text-align: center;
+}
+.mainBox textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  outline: 0;
+  margin: 10px 0;
+  text-align: justify;
+}
+.mainBox label {
+  font-size: 18px;
+}
+.mainBox select {
+  padding: 6px;
+  border-radius: 8px;
+  outline: 0;
+}
+.mainBox .control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.mainBox .control .speed,
+.mainBox .control .pitch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.mainBox .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.mainBox .buttons button {
+  border: 0;
+  background: green;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.mainBox .buttons button:active {
+  background: blue;
+}
+.mainBox .buttons button i {
+  font-size: 18px;
+  margin-top: 5px;
+}

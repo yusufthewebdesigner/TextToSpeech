@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text to Speech</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mainBox">
+      <h2>Text-to-Speech</h2>
+      <textarea id="text" placeholder="Write something...">
+        One of my favorite hobbies is reading. There is something incredibly calming and enriching about getting lost in a good book. Whether it’s fiction, nonfiction, or poetry, reading allows me to explore new ideas, visit different worlds, and understand diverse perspectives. I especially enjoy novels because they let me connect with characters, follow their journeys, and sometimes even see myself in them. Reading has also helped me improve my vocabulary and writing skills, which is useful in school and everyday life. I usually set aside time each evening to read, making it a peaceful way to end my day. Sometimes, I’ll even bring a book with me when I go out, so I can read during quiet moments.
+      </textarea>
+
+      <label>Voice:</label>
+      <select id="voiceSelect"></select>
+
+      <div class="control">
+        <div class="speed">
+          <label>Speed: </label>
+          <input
+            type="range"
+            id="speed"
+            min="0.5"
+            max="5"
+            step="0.1"
+            value="1"
+          />
+        </div>
+
+        <div class="pitch">
+          <label>Pitch: </label>
+          <input type="range" id="pitch" min="0" max="2" step="0.1" value="1" />
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="read">Read <i class="bi bi-volume-up"></i></button>
+        <button id="pausePlay">
+          Pause <i class="fa-regular fa-circle-pause"></i>
+        </button>
+        <button id="cancel">Cancel <i class="bi bi-x-circle"></i></button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
