@@ -58,14 +58,16 @@ speedRange.onchange = () => {
 pitchRange.onchange = () => {
   showPitch.innerText = pitchRange.value + "X";
 };
-//! to alert user if he opens in opera browser
+//! to alert user if he opens in opera browser.
 window.onload = function () {
-  const ua = navigator.userAgent;
-  // Opera detection
-  const isOpera = ua.includes("OPR") || ua.includes("Opera");
+  const ua = navigator.userAgent.toLowerCase();
+
+  const isOpera = ua.includes("opr") || ua.includes("opera");
+  const isChrome = ua.includes("chrome") && !isOpera;
+
   if (isOpera) {
-    alert(
-      "If reading feature is not compatible with opera browser, use google chrome. Thank you!"
-    );
+    alert("You are using Opera browser.");
+  } else if (isChrome) {
+    alert("You are using Google Chrome browser.");
   }
 };
