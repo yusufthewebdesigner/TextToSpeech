@@ -12,7 +12,7 @@
   border: 2px solid red;
   border-radius: 10px;
   width: 99%;
-  /* max-width: 450px; */
+  max-width: 450px;
   margin: 10px auto;
   padding: 10px;
 }
