@@ -32,10 +32,16 @@
 .mainBox label {
   font-size: 18px;
 }
+.mainBox .select {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .mainBox select {
   padding: 6px;
   border-radius: 8px;
   outline: 0;
+  width: 100%;
 }
 .mainBox .control {
   margin-top: 10px;
@@ -43,11 +49,16 @@
   display: flex;
   justify-content: space-between;
 }
-.mainBox .control .speed,
-.mainBox .control .pitch {
+
+.mainBox .control .speed p,
+.mainBox .control .pitch p {
+  text-align: right;
+  margin-top: 10px;
+}
+.mainBox .control .speed .range,
+.mainBox .control .pitch .range {
   display: flex;
   align-items: center;
-  gap: 5px;
 }
 .mainBox .buttons {
   display: flex;

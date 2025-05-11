@@ -1,3 +1,8 @@
+let speedRange = document.getElementById("speed");
+let pitchRange = document.getElementById("pitch");
+let showSpeed = document.querySelector(".showSpeed");
+let showPitch = document.querySelector(".showPitch");
+
 let readBtn = document.getElementById("read");
 let pausePlayBtn = document.getElementById("pausePlay");
 let cancelBtn = document.getElementById("cancel");
@@ -17,6 +22,7 @@ let populateVoices = () => {
 speechSynthesis.onvoiceschanged = populateVoices;
 
 readBtn.onclick = () => {
+  speechSynthesis.cancel(); //! Every time you click, reading starts from the begining
   const text = document.getElementById("text").value;
   const utterance = new SpeechSynthesisUtterance(text);
 
@@ -25,8 +31,8 @@ readBtn.onclick = () => {
     utterance.voice = selectedVoice;
   }
 
-  utterance.rate = +document.getElementById("speed").value;
-  utterance.pitch = +document.getElementById("pitch").value;
+  utterance.rate = +speedRange.value;
+  utterance.pitch = +pitchRange.value;
 
   speechSynthesis.speak(utterance);
 };
@@ -44,3 +50,11 @@ cancelBtn.onclick = () => {
 };
 
 window.onload = speechSynthesis.cancel();
+
+//! to display the speed and pitch
+speedRange.onchange = () => {
+  showSpeed.innerText = speedRange.value + "X";
+};
+pitchRange.onchange = () => {
+  showPitch.innerText = pitchRange.value + "X";
+};
