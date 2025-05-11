@@ -61,13 +61,10 @@ pitchRange.onchange = () => {
 //! to alert user if he opens in opera browser.
 window.onload = function () {
   const ua = navigator.userAgent.toLowerCase();
-
   const isOpera = ua.includes("opr") || ua.includes("opera");
-  const isChrome = ua.includes("chrome") && !isOpera;
-
   if (isOpera) {
-    alert("You are using Opera browser.");
-  } else if (isChrome) {
-    alert("You are using Google Chrome browser.");
+    alert(
+      "If reading feature if not compatible with Opera. Use Google Chrome. Thank you!"
+    );
   }
 };
